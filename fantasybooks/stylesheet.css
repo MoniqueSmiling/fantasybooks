@@ -1,0 +1,244 @@
+@import url("fonts/style.css");
+:root {
+
+    /* Colors */
+--orange-color:#FE7D4E;
+--black-color: #333333;
+--brown-color: #543D32;
+--light-grey-color: #707070;
+
+--primary-background: #FFF7F3;
+--light-grey-background: #FEFDF9; /* Book of the month */
+--light-grey-two-background: #FEF2F2;
+
+    /* Font */
+--header-font: 'Segoe UI Bold';
+--breadtext-font: 'Segoe UI Regular';
+
+    /* Shadow */
+--shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3);
+
+/* Margins */
+--side-margin: 9.3vw; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--breadtext-font);
+}
+
+body {
+    background: var(--primary-background);
+}
+
+/*==========================
+            HEADER
+============================*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8.25em;
+    margin: 0 var(--side-margin);
+}
+
+header.secondhand-header {
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+/*==========================
+    HEADERS: h1, h2 ,h3...
+============================*/
+
+h1, h2, h1 span {
+    font-family: var(--header-font);
+}
+
+h1 {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+
+h1 span {
+    color: var(--orange-color);
+    letter-spacing: 1px; 
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+/*==========================
+            NAV
+============================*/
+
+
+nav ul li {
+    font-family: var(--header-font);
+    display: inline;
+    list-style-type: none;
+    margin: 10px;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+header nav ul li:last-child a {
+    color: var(--orange-color);
+    background-color: 	var(--light-grey-two-background);
+    padding: 17px 40px;
+    border-radius: 25px;
+    border: .5px solid var(--orange-color);
+}
+
+
+/*==========================
+            LINKS
+============================*/
+
+a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+a:hover {
+    color: var(--brown-color);
+}
+
+a.arrow::after {
+    content: url(img/arrow-icon.svg); 
+    display: inline;
+}
+
+.arrow-icon {
+    max-width: 10px;
+}
+
+li.social-icons a svg {
+    fill: var(--orange-color);
+    height: 50px;
+}
+
+/*==========================
+        Sections
+============================*/
+
+section {
+    margin: 4.5em 0;
+}
+
+/*==========================
+        JUMBOTRON
+============================*/
+
+.jumbotron {
+    max-width: 100vw;
+}
+
+.jumbotron img {
+    width: 100vw;
+}
+
+#banner {
+    background-image: radial-gradient(transparent,#000000 150%), url(img/hero\ image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    height: 90vh;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /*  text    */ 
+    color: white;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+#banner p {
+    margin: 20px;
+    max-width: 65ch; /* sets a limit on character per line*/
+}
+
+/*==========================
+        Gallery
+============================*/
+
+.secondhand section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 var(--side-margin);
+}
+
+/* Large */
+.secondhand section img {
+    flex: 1 0 20%;
+    max-width: 22%;
+    box-shadow: var(--shadow);
+
+}
+
+/* Medium */
+
+
+/* small */
+
+section.monthly-book {
+    display: flex;
+}
+
+section.monthly-book section:first-child {
+    background-color: var(--light-grey-background);
+    flex-basis: 40%;
+}
+
+
+section.monthly-book section:first-child {
+    justify-content: center;
+}
+
+section.monthly-book section:last-child {
+    background-color: var(--light-grey-two-background);
+    flex-basis: 60%;
+}
+
+#book-club {
+    background-image: url(img/Cover-Bogklub.jpg);
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#book-club a {
+    height: 1.2em;
+    background-color: var(--orange-color);
+    font-family: var(--header-font);
+    padding: 15px 40px;
+    border-radius: 25px;
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+/*==========================
+        Footer
+============================*/
+
+footer {
+    display: flex;
+    background-color: var(--light-grey-background);
+}
+
+footer article {
+    flex-basis: 33.33%;
+    justify-content: space-around;
+    margin-left: var(--side-margin);
+}
